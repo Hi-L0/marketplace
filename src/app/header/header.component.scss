@@ -1,0 +1,74 @@
+.badgee{
+    padding: 2px 8px;
+    border-radius: 50% ;
+    font-size: 14px;
+    &.badge-green{
+        background-color: #2aa200;
+        color: white;
+    }
+    &.badge-red{
+        background-color: #e32525;
+        color: white;
+    }
+}
+.sideBar{
+    width: 500px;
+    height: 100%;
+    z-index: 1000;
+    box-shadow: 2px 2px  #CCC;
+    border-left: 1px solid #ccc;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    .close-btn{
+        display: flex;
+        flex-direction: row-reverse;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .product{
+        background-color: #CCC;
+        height: 30%;
+        // width: 100%;
+        margin: 12px;
+        border-radius: 10px;
+       
+        .img{
+            display: flex;
+            display: row;
+            width: 90px;
+            height: 180px;
+            background-color: white;
+            position: absolute;
+        }
+        .product-title{
+            margin-left:90px;
+        }
+        .card-text{
+            margin-left: 90px;
+        }
+        .quantity{
+            // float: right;
+            width: 30px;
+            border-radius: 5px;
+            // background-color: red;
+        }
+        .card-footer{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .actionBtn{
+            background-color: #eee;
+            &:hover{
+                background-color: #928f58;
+            }
+        }
+        .trashBtn{
+            float: right;
+            img{
+                color: red;
+            }
+        }
+    }
+}
