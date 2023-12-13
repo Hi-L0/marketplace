@@ -24,6 +24,18 @@ export class CartService {
     this._cartItems.next(currentCartItems);
   };
 
+  addCustomQuantity=(item:MarketplaceItemType,quantity:number)=>{
+    const currentCartitems=this._cartItems.getValue();
+    const thisItem=currentCartitems.find((it)=>it.item.id===item.id);
+    if(thisItem){
+      if(quantity>0){
+        thisItem.quantity += quantity;
+      }else{
+          console.log('wrong value for quentity')
+      }
+    }
+  }
+
   decrementItemCart=(item:MarketplaceItemType,quantity=1)=>{
     const currentCartItems = this._cartItems.getValue();
     const searchItem = currentCartItems.find((it)=>it.item.id===item.id);
