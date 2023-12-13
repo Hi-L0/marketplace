@@ -1,0 +1,23 @@
+<div class="marketplace-list">
+    <div class="single-item" *ngFor="let item of marketplaceItems">
+        <div class=" mb-3 flex" style="max-width: 540px;">
+            <div class="row ">
+              <div class="left-set">
+                <img [src]="item.image" [alt]="item.title">
+              </div>
+              <div class="right-set">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.title| uppercase}}</h5>
+                    <p class="card-text"><small class="text-muted">{{item.category}}</small></p>
+                    <p class="card-text"><b>$ {{item.price}}</b></p>
+                    <p class="card-text desc">{{item.description}}</p>
+                </div>
+                <div class="cart">
+                  <button class="add_to_cart" *ngIf="!item.isSelected" (click)="addToCart(item)"> + Add to cart</button>
+                  <button class="remove_from_cart" *ngIf="item.isSelected" (click)="removeFromCart(item)"> - Remove from cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
