@@ -22,8 +22,8 @@ export class HeaderComponent implements OnInit,OnDestroy{
   ngOnInit(): void {
     this.cartItemSub = this.cartService.getCartItems().subscribe(cartItems=>{
       this.cartItems=cartItems;
-      if(cartItems.length>0){
-      console.log(cartItems[0].item)}
+      // if(cartItems.length>0){
+      // console.log(cartItems)}
     })
   }
   toggleSideBar(){
