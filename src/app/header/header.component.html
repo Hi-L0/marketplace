@@ -30,8 +30,11 @@
     </div>
   </nav>
   <div class="sideBar" *ngIf="showCart">
-    <div class="close-btn" (click)="toggleSideBar()">
-      <img src="assets/icons/icons8-x-button.svg" alt="">
+    <div class="sidebarheader">
+      <h4>Cart</h4>
+      <div class="close-btn" (click)="toggleSideBar()">
+        <img src="assets/icons/icons8-x-button.svg" alt="">
+      </div> 
     </div>
     <div *ngIf="cartItems.length === 0">
       <h4 class="text-center">

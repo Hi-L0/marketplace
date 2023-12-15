@@ -23,12 +23,19 @@
     right: 0;
     bottom: 0;
     overflow-y: auto;
-    .close-btn{
+    .sidebarheader{
         display: flex;
-        flex-direction: row-reverse;
-        &:hover{
-            cursor: pointer;
+        flex-direction: row;
+        justify-content: space-between;
+        h4{
+            margin-left: 10px;
         }
+        .close-btn{
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
     }
     .product{
         background-color: #CCC;
